@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>descending</title>
+</head>
+<body>
+	<input type="number" name="abc" id="demo">
+	<button onclick="fun()">Enter</button>
+	<div id="demo1"></div>
+
+	<script type="text/javascript">
+		var arr=[];
+
+		function fun(){
+			var x=document.getElementById("demo").value;
+			arr.push(x);
+			
+
+			arr=arr.sort(function(a,b){
+				return b-a;
+			});
+
+			document.getElementById("demo1").innerHTML=arr;
+
+		}
+	</script>
+
+</body>
+</html>

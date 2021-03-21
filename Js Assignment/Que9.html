@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write a JavaScript function to test whether a date is a weekend.
+Note : Use standard Saturday/Sunday definition of a weekend.</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var my_weekend=function(date){
+			var d=new Date(date);
+			if(d.getDay()==6||d.getDay()==0 ){
+				return "weekend";
+			}
+		}
+		console.log(my_weekend('Sept 13,2020'));
+		console.log(my_weekend('Sept 14,2020'));
+		console.log(my_weekend('Sept 15,2020'));
+
+	</script>
+
+</body>
+</html>

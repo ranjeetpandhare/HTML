@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>localStorage</title>
+</head>
+<body>
+	<form name="student" onsubmit="add()">
+	sid:<input type="number" name="sid">
+	sname:<input type="text" name="sname">
+	<button type="submit">Add</button>
+	
+</form>
+<button onclick="show()">Show</button>
+<div id="demo"></div>
+
+<script type="text/javascript">
+	function add(){
+		var x=document.forms['student'];
+		var key=x.elements[0].value;
+		var val=x.elements[1].value;
+		localStorage.setItem(key,val);
+	}
+	
+	function show(){
+	var t=" ";
+	
+		for(var i=0;i<localStorage.length;i++){
+			var k=localStorage.key(i);
+			 var v=localStorage.getItem(k);
+		
+			t=t+(k+"-"+v+"</br>");
+		}
+		console.log(t);
+		document.getElementById("demo").innerHTML=t;
+
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sort object</title>
+</head>
+<body>
+<script type="text/javascript">
+	var library=[{ title: 'The Road Ahead',
+author: 'Bill Gates', libraryID: 1254 }, { title: 'Three Mistakes', author: 'Steve Jobs', libraryID: 4264 }, { title: 'Ronaldo', author: 'Steve Jobs', libraryID: 3245 }];
+
+library=library.sort(function(a,b){
+	return b.libraryID-a.libraryID;
+});
+
+document.write(JSON.stringify(library)+"</br>");
+
+library=library.filter(function(value){
+	return value.author=="Steve Jobs"
+});
+
+document.write(JSON.stringify(library));
+
+</script>
+</body>
+</html>

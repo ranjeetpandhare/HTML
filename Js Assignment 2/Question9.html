@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>on focus</title>
+</head>
+<body>
+
+	<input type="text" name="num1" id="num1">
+	<input type="text" name="num2" id="num2">
+	<button onclick="myFun()">Enter</button>
+
+	<script type="text/javascript">
+		function myFun(){
+			var x=document.getElementById("num1").value;
+			var y=document.getElementById("num2").value;
+
+			if(!(isNaN(x)) && !(isNaN(y))){
+				alert(parseInt(x)+parseInt(y));
+			}
+
+			else{
+
+				alert("Invalid Number")
+
+				if(isNaN(x)){
+					document.getElementById("num1").focus();
+					
+				}
+
+				if(isNaN(y)){
+					document.getElementById("num2").focus();
+
+				}
+			}
+		}
+
+		
+	</script>
+
+</body>
+</html>

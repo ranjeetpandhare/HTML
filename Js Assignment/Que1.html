@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write a JavaScript function to get a copy of the object where the keys have become the values
+and the values the keys.
+</title>
+</head>
+<body>
+	<script>
+		function val2key(val,array){
+			for(var key in array ){
+				if(array[key]==val){
+					return key;
+				}
+			}
+		}
+		var person={"first" : 1, "second" : 2};
+		var key=val2key(2,person);
+		console.log(key);
+	</script>
+</body>
+</html>

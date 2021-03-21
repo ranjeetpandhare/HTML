@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		String.prototype.sub_String=function(){
+			var sub_set=[];
+			for(var i=0;i<this.length;i++){
+				for(var j=i+1;j<this.lenght+1;j++){
+					sub_set.push(this.slice(m,n));	
+				}
+			}
+			return sub_set;
+		};
+		console.log("dog".sub_String());
+	</script>
+
+</body>
+</html>

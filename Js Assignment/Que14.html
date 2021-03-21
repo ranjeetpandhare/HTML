@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Write a JavaScript program to find the most frequent item of an array
+Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+Sample Output : a ( 5 times )</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3,3,3,3,3];
+		var temp,a=1,b=0;
+
+		for(var i=0;i<arr.length;i++){
+			for(var j=i;j<arr.length;j++){
+			if(arr[i]==arr[j])
+				b++;
+				if(a<b){
+					a=b;
+					temp=arr[i];
+			}
+		}
+		b=0;
+	}
+
+console.log(temp+" "+a);
+
+	</script>
+
+</body>
+</html>

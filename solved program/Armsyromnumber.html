@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var x,y,sum=0,k;
+		y=x;
+		function arm(){
+			x=parseInt(document.fr.n.value);
+			while(x!=0) 
+			{
+				k=parseInt(x)%10;
+				x=Math.floor(x/10);
+				sum=sum+Math.pow(k,3);
+			}
+			if(sum == y){
+				document.write("armstrong number");
+			}
+			else{
+				document.write("not armstrong");
+			}
+
+		}
+	</script>
+	<form name="fr">
+		<input type="text" name="n">
+		<button type="button" onclick="arm()"> click me </button>
+	</form>
+</body>
+</html>
